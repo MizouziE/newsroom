@@ -1,0 +1,25 @@
+.article {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #cccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+.article h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.article h3 {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.article a img {
+    padding: 2rem 0;
+    border-radius: 12px;
+}
