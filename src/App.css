@@ -11,8 +11,9 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 22vmin;
   pointer-events: none;
+  margin: 1rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,10 +23,25 @@
 }
 
 .App-header {
+  margin: 2rem;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.App button {
+  padding: 1rem;
+  margin: 2rem;
+  background-color: slategray;
+  border-radius: 5px;
+  color: whitesmoke;
+  font: bold;
+}
+
+.App button:hover {
+  background-color: #4a9ee4;
+  color: black;
 }
 
 @keyframes App-logo-spin {

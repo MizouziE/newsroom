@@ -1,8 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import ArticleList from './components/ArticleList';
-import logo from './logo.svg'
+import epaLogo from './epaLogo.png'
 import './App.css';
 import Card from './components/Card';
+
+// For testing
+import dummyData from './DummyData.json'
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -14,18 +17,20 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch('https://energy-price-news.p.rapidapi.com/news', {
-        headers: {
-          'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
-          'X-RapidAPI-Host': 'energy-price-news.p.rapidapi.com'
-        }
-      });
+      // const response = await fetch('https://energy-price-news.p.rapidapi.com/news?trunc=34', {
+      //   headers: {
+      //     'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+      //     'X-RapidAPI-Host': 'energy-price-news.p.rapidapi.com'
+      //   }
+      // });
 
-      if (!response.ok) {
-        throw new Error('Something went wrong!');
-      }
+      // if (!response.ok) {
+      //   throw new Error('Something went wrong!');
+      // }
 
-      const data = await response.json();
+      // const data = await response.json();
+
+      const data = dummyData;
 
       let loadedArticles = [];
 
@@ -67,11 +72,11 @@ function App() {
 
   return (
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={epaLogo} className="App-logo" alt="logo" />
       <header>
         NewsRoom
       </header>
-      <button onClick={fetchArticlesHandler}>Get Articles</button>
+      <button onClick={fetchArticlesHandler}>Refresh Articles</button>
       <Card>
         <section>{content}</section>
       </Card>
